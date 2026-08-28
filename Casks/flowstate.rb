@@ -1,6 +1,6 @@
 cask "flowstate" do
-  version "1.4"
-  sha256 "70bb678e732c2349a7739c8ff428097eb403119b7ddfae127b2c2714dffbe11e"
+  version "0.1.4"
+  sha256 "4c4778b342a6c8437f3835744b354851bff6cfff42db32b869a9a0af22ec11df"
 
   url "https://github.com/keegan-sucks/flowstate-macos/releases/download/v#{version}/Flowstate.app.zip"
   name "Flowstate"
