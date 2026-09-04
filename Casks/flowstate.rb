@@ -4,10 +4,10 @@ cask "flowstate" do
 
   url "https://github.com/keegan-sucks/flowstate-macos/releases/download/v#{version}/Flowstate.app.zip"
   name "Flowstate"
-  desc "Menu-bar Pomodoro timer with a spotify_player focus soundtrack"
+  desc "Menu-bar Pomodoro timer with a Spotify focus soundtrack"
   homepage "https://github.com/keegan-sucks/flowstate-macos"
 
-  depends_on formula: "spotify_player"
+  depends_on cask: "spotify"
 
   app "Flowstate.app"
 
@@ -16,10 +16,11 @@ cask "flowstate" do
     Right-click the app and choose Open, or clear the quarantine flag once:
       xattr -dr com.apple.quarantine "/Applications/Flowstate.app"
 
-    The soundtrack needs spotify_player authenticated once (Spotify Premium):
-      spotify_player authenticate
+    The soundtrack drives the Spotify app. On first play, approve the one-time
+    "Flowstate wants to control Spotify" prompt, and make sure you're logged in.
 
-    Optional: install AeroSpace to auto-place the player terminal on a workspace.
+    To use your Liked Songs, mirror them into a playlist and point a slot at it
+    (Spotify can't shuffle Liked Songs directly) — see the project README.
   EOS
 
   zap trash: [
