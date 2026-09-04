@@ -7,8 +7,6 @@ cask "flowstate" do
   desc "Menu-bar Pomodoro timer with a Spotify focus soundtrack"
   homepage "https://github.com/keegan-sucks/flowstate-macos"
 
-  depends_on cask: "spotify"
-
   app "Flowstate.app"
 
   caveats <<~EOS
@@ -16,8 +14,10 @@ cask "flowstate" do
     Right-click the app and choose Open, or clear the quarantine flag once:
       xattr -dr com.apple.quarantine "/Applications/Flowstate.app"
 
-    The soundtrack drives the Spotify app. On first play, approve the one-time
-    "Flowstate wants to control Spotify" prompt, and make sure you're logged in.
+    The soundtrack drives the Spotify app, which must be installed:
+      brew install --cask spotify   (or from spotify.com)
+    On first play, approve the one-time "Flowstate wants to control Spotify"
+    prompt, and make sure you're logged in.
 
     To use your Liked Songs, mirror them into a playlist and point a slot at it
     (Spotify can't shuffle Liked Songs directly) — see the project README.
